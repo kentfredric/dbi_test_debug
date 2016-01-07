@@ -10,6 +10,6 @@ install:
   - env | sort
 
 script:
-  - export TRAVIS_PERL_VERSION=5.22
+  - export TRAVIS_PERL_VERSION="5.22.0"
   - eval $(curl https://travis-perl.github.io/init) --perl
   - perl $(which cpanm) -v $TARGET
