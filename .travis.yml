@@ -3,8 +3,8 @@ language: perl
 perl: 5.22
 sudo: false
 env:
-  - TARGET=DBD::SQLite
-  - TARGET=DBI
+  - TARGET=CPAN::Changes::Dependencies::Details
+  - TARGET=MooX::Lsub
 
 install:
   - env | sort
