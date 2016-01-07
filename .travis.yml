@@ -3,7 +3,7 @@ language: perl
 perl: 5.20
 sudo: false
 env:
-  - TARGET=Module::Pluggable
+  - TARGET=Module::Pluggable~5.1
   - TARGET=Module::Build
 
 install:
