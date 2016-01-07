@@ -1,0 +1,13 @@
+# This is probably a net-loss for setup etc - a bare 'C' will likely fare much better
+language: perl
+perl: 5.22
+sudo: false
+env:
+  - TARGET=DBD::SQLite
+  - TARGET=DBI
+
+install:
+  - env | sort
+
+script:
+  - perl $(which cpanm) -v $TARGET
