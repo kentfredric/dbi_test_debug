@@ -3,8 +3,8 @@ language: perl
 perl: 5.22
 sudo: false
 env:
-  - TARGET=CPAN::Changes::Dependencies::Details
-  - TARGET=MooX::Lsub
+  - TARGET=CPAN::Test::Dummy::Perl5::Make::ConfReq
+  - TARGET=CPAN::Test::Dummy::Perl5::Make
 
 install:
   - env | sort
