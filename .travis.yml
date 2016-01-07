@@ -1,15 +1,16 @@
 # This is probably a net-loss for setup etc - a bare 'C' will likely fare much better
 language: perl
-perl: 5.20
+perl: 5.22.0
 sudo: false
 env:
   - TARGET="Module::Pluggable@5.1"
   - TARGET=Module::Build
 
+before_install:
+  - perlbrew list
+  - eval $(curl https://travis-perl.github.io/init) --perl
 install:
   - env | sort
 
 script:
-  - export TRAVIS_PERL_VERSION="5.22.0"
-  - eval $(curl https://travis-perl.github.io/init) --perl
   - perl $(which cpanm) -v $TARGET
